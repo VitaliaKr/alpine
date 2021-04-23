@@ -1,0 +1,103 @@
+extends layout/layout
+
+block vars
+    - var pageTitle = 'Главная страница'
+    - var pageBodyClass = 'homepage'
+    - var pageHeaderClass = ''
+
+block content
+    header.header
+        div.menu 
+            a.menu__logo(href="#")
+                img.menu__logo_pic(src="../assets/imgs/logo.svg" alt="error")
+            ul.menu__list 
+                li.menu__list_item 
+                    a.menu__list_link(href="#") about us
+                li.menu__list_item 
+                    a.menu__list_link(href="#") pricing
+                li.menu__list_item 
+                    a.menu__list_link(href="#") mobile
+                li.menu__list_item 
+                    a.menu__list_link(href="#") blog
+        .wrap 
+            .header__content
+                h1.header__content-title1 alpine 
+                h2.header__content-title2  social media marketing platform
+                .header__content-txt The core systems of record for marketing that provide a common way of orchestring the experiences across channels and appllcations, including operational managment and measurement, with the ultimate goal of driving customer engagement.
+            form.search-form(action="#")
+                input.search-form__field(type="search" placeholder="Enter your work email !")
+                button.search-form__btn Request acces
+            .media
+                    a.media__link(href="#")
+                        img.media__pic(src="../assets/imgs/facebook_logo.svg" alt="error") 
+                    a.media__link(href="#")
+                        img.media__pic(src="../assets/imgs/Instagram_logo.svg" alt="error") 
+                    a.media__link(href="#")
+                        img.media__pic(src="../assets/imgs/twitter.svg" alt="error") 
+                    a.media__link(href="#")
+                        img.media__pic(src="../assets/imgs/youtube.svg" alt="error") 
+                    a.media__link(href="#")
+                        img.media__pic(src="../assets/imgs/pinterest_logo.svg" alt="error") 
+                    a.media__link(href="#")
+                        img.media__pic(src="../assets/imgs/google.svg" alt="error") 
+            .imgs 
+                    img.imgs_left(src="../assets/imgs/left.jpg" alt="error")
+                    img.imgs_center(src="../assets/imgs/center.jpg" alt="error")
+                    img.imgs_right(src="../assets/imgs/right.jpg" alt="error")
+            .marketing 
+                    h2.marketing_tittle marketing  
+                    img.marketing_sms(src="../assets/imgs/sms.svg" alt="error")
+                    button.marketing__btn Start a thread
+        .sponsors
+            mixin sponsors(pic)
+                img.sponsors-logo(src=pic alt="error")
+            +sponsors("../assets/imgs/spon_glossier.svg")
+            +sponsors("../assets/imgs/aspire-logo.svg")
+            +sponsors("../assets/imgs/nylas-logo.svg")
+            +sponsors("../assets/imgs/bitwise.svg")
+        .reviews
+            mixin reviews(pic, logo , txt )
+                .reviews-wrap
+                    .reviews-box
+                        img.reviews-pic(src=pic alt="error")
+                        img.reviews-logo(src=logo alt="error")
+                    .reviews-txt=txt
+            +reviews("../assets/imgs/reviews-pic1.png","../assets/imgs/reviews-logo1.svg" , "The AMA’s definitions of marketing and marketing research are reviewed and reapproved/modified every three-years by a panel of five scholars who are active researchers.")
+            +reviews("../assets/imgs/reviews-pic2.png","../assets/imgs/reviews-logo2.svg" , "Marketing is the activity, set of institutions, and processes for creating, communicating, delivering, and exchanging offerings that have value for customers, clients, partners, and society at large. ")
+            +reviews("../assets/imgs/reviews-pic3.png","../assets/imgs/reviews-logo3.svg" , "A brand is a name, term, design, symbol or any other feature that identifies one seller’s good or service as distinct from those of other sellers.")
+        .footer
+            .footer-wrap
+                .footer-box
+                    a.footer-link(href="#")
+                        img.footer-logo(src="../assets/imgs/footer.svg" alt="error")
+                    mixin footer(name , link1 , link2 )
+                        ul.footer-list=name
+                            li.footer-item 
+                                a.footer-link(href="#")=link1
+                            li.footer-item 
+                                a.footer-link(href="#")=link2
+                    +footer("explore" , "Pricing" , "Mobile")
+                    +footer("recources" , "Blog" )
+                    +footer("company" , "About us" , "Contact")
+                .footer-box2 
+                    .footer-box2-links
+                        a.footer-media(href="#")
+                            img.footer-media-pic(src="../assets/imgs/vk.svg" alt="error")
+                        a.footer-media(href="#")
+                            img.footer-media-pic(src="../assets/imgs/tw.svg" alt="error")
+                        a.footer-media(href="#")
+                            img.footer-media-pic(src="../assets/imgs/face.svg" alt="error")
+                    .footer-end Terms&Privacy
+                    .footer-end2  © 2019 Threads Group inc.
+            .footer-thaks-wrap
+                .footer-thanks thanks for watching 
+
+            //- .notification1  
+            //-     h3.notification1_tittle1 Unread Notifications
+            //-     .notification1-box 
+            //-         img.notification1-box-ava(src="../assets/imgs/ava1.png" alt="error")
+            //-         p.notification1-box-name Rosario
+            //-             span.notification1-box-name-2 just now
+            //-         .notification1-box-content
+            //-             p.notification1-box-tittle Showcasing Customers
+            //-             p.notification1-box-txt Our customers have continued to send in pictures of their finished artwork...
