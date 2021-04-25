@@ -31,6 +31,7 @@ html{
 }
 .header{
     background-image: url(../imgs/bgc.jpg);
+    background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
    
@@ -112,6 +113,7 @@ html{
         border: 2px solid #FF1640;
         border-radius: 50px;
         height: 36px;
+        transition: border 03s;
     }
     &__btn:hover{
         text-decoration: underline;
@@ -178,14 +180,23 @@ html{
         background: linear-gradient(180deg, #6a3e21 0%, #542e14 100%);
     }
 }
+.custom-switch{
+    padding-left: 80px;
+}
 .notification2 {
     padding-bottom: 80px;
+}
+.custom-control.custom-switch{
+    padding-left: 80px;
 }
 .notification1 {
     &-wrap{
         display: flex;
         padding-bottom: 20px;
         margin: 0 auto;
+    }
+    &_tittle1{
+        display: flex;
     }
     &_tittle2{
         font-weight: 600;
@@ -201,6 +212,7 @@ html{
         color: #FFFFFF;
         margin-left: 50px;
         margin-bottom: 15px;
+        display: flex;
     }
     &-txt{
         padding-top: 14px;
@@ -303,6 +315,7 @@ color:  #000000;
 
 .footer{
     background-image: url(../imgs/footer-bc.png);
+    background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

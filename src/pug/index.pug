@@ -50,6 +50,10 @@ block content
                     button.marketing__btn Start a thread
             .notification1  
                 h3.notification1_tittle1 Unread Notifications
+                    custom-control.custom-switch
+                        input#customSwitch2.custom-control-input(type='checkbox' disabled='')
+                        label.custom-control-label(for='customSwitch2')
+
                 .notification1-wrap
                     .notification1-box 
                         img.notification1-box-ava(src="../assets/imgs/ava1.png" alt="error")
@@ -61,6 +65,10 @@ block content
                         .notification1-txt Technology trends have the potential to drive significant disruption and deliver significant opportunity. Digital trends such as autonomous things, blockchain, digital twins and smart spaces are rapidly approaching maturity.
             .notification2  
                 h3.notification1_tittle3 Recent
+                    .custom-control.custom-switch
+                        input#customSwitch1.custom-control-input(type='checkbox')
+                        label.custom-control-label(for='customSwitch1')
+         
                 .notification1-wrap
                     .notification1-box 
                         img.notification1-box-ava(src="../assets/imgs/ava2.png" alt="error")
@@ -117,11 +125,3 @@ block content
                     .footer-end2  © 2019 Threads Group inc.
             .footer-thaks-wrap
                 .footer-thanks thanks for watching&#9786
-
-        //- .form-check_form-switch
-        //-     input.form-check-input(type="checkbox" id="flexSwitchCheckDefault")
-        //-     label.form-check-label(for="flexSwitchCheckDefault") Default switch checkbox input 
-
-        //- .form-check_form-switch
-        //-     input.form-check-input(type="checkbox" id="flexSwitchCheckChecked" checked)
-        //-     label.form-check-label(for="flexSwitchCheckChecked") Checked switch checkbox input
